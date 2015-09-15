@@ -7,17 +7,40 @@
 //
 
 import UIKit
+import CoreLocation
 
-class CurrentLocationViewController: UIViewController {
+class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate {
+    
+    var locationManager: CLLocationManager!
 
+    @IBOutlet weak var longitude: UILabel!
+    
+    
+    @IBOutlet weak var lattitude: UILabel!
+    
+    
+    @IBAction func tagLocation(sender: UIButton) {
+    }
+    
+    @IBAction func getLocation(sender: UIButton) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy - kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+         locationManager.startUpdatingLocation()
+
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+       
     }
 
 
