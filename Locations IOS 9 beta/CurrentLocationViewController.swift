@@ -42,6 +42,24 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         super.didReceiveMemoryWarning()
        
     }
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+        
+                var userLocation: CLLocation = locations[0] as! CLLocation
+        
+                self.lattitude.text =  "\(userLocation.coordinate.latitude)"
+                self.longitude.text =  "\(userLocation.coordinate.longitude)"
+
+    }
+    
+    
+
+    
+    
+    
+    
+    
+    
 
 
 }
