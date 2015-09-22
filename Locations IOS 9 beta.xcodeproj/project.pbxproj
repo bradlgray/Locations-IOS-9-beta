@@ -56,13 +56,13 @@
 		8F659D491BA12E78001205DE /* Locations IOS 9 beta */ = {
 			isa = PBXGroup;
 			children = (
+				8F659D581BA12E78001205DE /* Info.plist */,
 				8F659D4A1BA12E78001205DE /* AppDelegate.swift */,
 				8F659D4C1BA12E78001205DE /* CurrentLocationViewController.swift */,
 				8F659D4E1BA12E78001205DE /* SecondViewController.swift */,
 				8F659D501BA12E78001205DE /* Main.storyboard */,
 				8F659D531BA12E78001205DE /* Assets.xcassets */,
 				8F659D551BA12E78001205DE /* LaunchScreen.storyboard */,
-				8F659D581BA12E78001205DE /* Info.plist */,
 			);
 			path = "Locations IOS 9 beta";
 			sourceTree = "<group>";
@@ -289,6 +289,7 @@
 				8F659D5D1BA12E78001205DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

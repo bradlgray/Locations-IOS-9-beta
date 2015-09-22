@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--Tag-->
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljo-CW-aYY">
-                                <rect key="frame" x="256" y="373" width="88" height="30"/>
+                                <rect key="frame" x="227" y="285" width="88" height="30"/>
                                 <state key="normal" title="Tag Location"/>
                                 <connections>
                                     <action selector="tagLocation:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Xtu-Vb-ekB"/>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgo-gq-IVO">
-                                <rect key="frame" x="244" y="492" width="112" height="30"/>
+                                <rect key="frame" x="222" y="323" width="112" height="30"/>
                                 <state key="normal" title="Get My Location"/>
                                 <connections>
                                     <action selector="getLocation:" destination="9pv-A4-QxB" eventType="touchUpInside" id="CNb-Eg-Qcs"/>
@@ -72,6 +72,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FbX-W7-Tf9">
+                                <rect key="frame" x="91" y="399" width="240" height="128"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -79,6 +82,7 @@
                     <connections>
                         <outlet property="lattitude" destination="4df-jK-g28" id="v3o-ZQ-WUf"/>
                         <outlet property="longitude" destination="vK5-6i-i4y" id="lPL-o4-p9i"/>
+                        <outlet property="map" destination="FbX-W7-Tf9" id="zbz-rc-4aD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
