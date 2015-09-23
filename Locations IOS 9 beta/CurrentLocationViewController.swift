@@ -16,6 +16,8 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
     
     var locationManager: CLLocationManager!
 
+    @IBOutlet weak var addressLabel: UILabel!
+    
     @IBOutlet weak var map: MKMapView!
     
     @IBOutlet weak var longitude: UILabel!
@@ -74,39 +76,34 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
                 self.lattitude.text =  "\(userLocation.coordinate.latitude)"
                 self.longitude.text =  "\(userLocation.coordinate.longitude)"
         
-        var location = CLLocation(lattitude, longitude)
-        print(location)
+      
+       CLGeocoder().reverseGeocodeLocation(userLocation) { (placemark, error) -> Void in
         
-        CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
-            println(location)
+        if error != nil {
             
-            if error != nil {
-                println("Reverse geocoder failed with error" + error.localizedDescription)
-                return
-            }
-            
-            if placemarks.count > 0 {
-                let pm = placemarks[0] as! CLPlacemark
-                println(pm.locality)
-            }
-            else {
-                println("Problem with the data received from geocoder")
-            }
-        })
-
         
+                
+                print(error)
+                
+        }
+        
+        else
+        
+        {
+            
+            if let p = placemark?[0] {
+                
+                print(p)
+                self.addressLabel.text = "\(p.subThoroughfare!) \(p.thoroughfare!) \(p.subAdministrativeArea!) \(p.postalCode!)"
+                
+            }
+            
+        }
+        
+        }
+    
 
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
-
+}
 }
 
